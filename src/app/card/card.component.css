@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 2px 3px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
+}
+
+.top {
+  width: 35%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #e98074;
+  box-shadow: 10px 0 5px -2px #dfdbdb;
+}
+
+.top .image {
+  width: 200px;
+  height: 200px;
+}
+
+.top .image img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3.5px solid #2b7a7b;
+}
+
+.detail h2 {
+  text-align: center;
+  color: #17252a;
+  padding: 3px;
+}
+
+.detail h3 {
+  text-align: center;
+  color: #feffff;
+  padding: 2px;
+}
+
+.bottom {
+  width: 65%;
+  position: relative;
+  height: 100%;
+  background: inherit;
+  background-color: #2b7a7b;
+}
+
+.bottom .icons {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+ul li a .fab {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(50px - 12px);
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+ul li:nth-child(1) a:hover .fab {
+  color: black;
+}
+
+ul li:nth-child(2) a:hover .fab {
+  color: #1da1f2;
+}
+
+ul li:nth-child(3) a:hover .fab {
+  color: #007bb6;
+}
+
+ul li:nth-child(4) a:hover .fab {
+  color: red;
+}
+
+ul li:nth-child(5) a:hover .fab {
+  color: #900020;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 72%;
+}
+
+.content .about {
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: #cccccc;
+  font-size: 22px;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content a > .mail {
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  background-color: #17252a;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  margin-left: 100px;
+  gap: 3px;
+}
+
+.ico {
+  width: 20%;
+  text-align: right;
+  color: whitesmoke;
+  margin: auto;
+}
+
+.mai {
+  width: 80%;
+  text-align: left;
+  color: whitesmoke;
+  margin: auto;
+}
+
+/*----------------------------------- media query----------------------------------*/
+
+@media screen and (max-width:600px){
+  .body{
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+  }
+
+  .top {
+    height: 35%;
+    width: 100%;
+    box-shadow: 0 10px 5px -2px #dfdbdb;
+  }
+  
+  .top .image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 65%;
+  }
+  
+  .bottom .icons {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+  }
+
+  .bottom .icons {
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  
+  ul li a .fab {
+    line-height: calc(40px - 12px);
+    font-size: 20px;
+  }
+
+  .content {
+    height: 82%;
+  }
+  
+  .content .about {
+    height: 90%;
+    width: 96%;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  .content a > .mail {
+    margin-left: 50px;
+    gap: 3px;
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .ico {
+    width: 10%;
+  }
+  
+  .mai {
+    width: 90%;
+  }
+}
+
+@media (min-width:420px) and (max-width:600px){
+  .content .about {
+    height: 90%;
+    width: 96%;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: auto;
+  }
+
+}
+
+@media screen and (max-width:376px){
+  .body{
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+  }
+
+  .top {
+    height: 35%;
+    width: 100%;
+    box-shadow: 0 10px 5px -2px #dfdbdb;
+  }
+  
+  .top .image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 65%;
+  }
+  
+  .bottom .icons {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+  }
+
+  .bottom .icons {
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  
+  ul li a .fab {
+    line-height: calc(40px - 12px);
+    font-size: 20px;
+  }
+
+  .content {
+    height: 82%;
+  }
+  
+  .content .about {
+    height: 90%;
+    width: 96%;
+    font-size: 16px;
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  .content a > .mail {
+    margin-left: 50px;
+    gap: 3px;
+    width: 70%;
+  }
+  
+  .ico {
+    width: 10%;
+  }
+  
+  .mai {
+    width: 90%;
+  }
+}
+@media (min-width:600px) and (max-width:1200px) {
+  .body{
+    flex-direction: column;
+    width: 65%;
+    height: 80%;
+  }
+
+  .top {
+    height: 35%;
+    width: 100%;
+    box-shadow: 0 10px 5px -2px #dfdbdb;
+  }
+  
+  .top .image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 65%;
+  }
+  
+  .bottom .icons {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+  }
+
+  .bottom .icons {
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  
+  ul li a .fab {
+    line-height: calc(40px - 12px);
+    font-size: 20px;
+  }
+
+  .content {
+    height: 82%;
+  }
+  
+  .content .about {
+    height: 90%;
+    width: 96%;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  .content a > .mail {
+    margin-left: 50px;
+    gap: 3px;
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .ico {
+    width: 10%;
+  }
+  
+  .mai {
+    width: 90%;
+  }
+}
+
+@media (min-width:800px) and (max-width:1200px){
+  .content .about {
+    height: 90%;
+    width: 96%;
+    font-size: 22px;
+    text-align: justify;
+    text-justify: auto;
+  }
+}
